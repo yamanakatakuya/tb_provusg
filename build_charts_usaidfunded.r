@@ -107,9 +107,9 @@ output$prov_usaid_plot <- renderEcharts4r({
            
            m_10 = ifelse(report_frequency == 71, round(q_4/3), m_10),
            m_11 = ifelse(report_frequency == 71, round(q_4/3), m_11),
-           m_12 = ifelse(report_frequency == 71, round(q_4/3), m_12),
+           m_12 = ifelse(report_frequency == 71, round(q_4/3), m_12)#,
            
-           year = ifelse(report_frequency == 71, paste(year, "(quarterly averaged as monthly)"), year)
+           # year = ifelse(report_frequency == 71, paste(year, "(quarterly averaged as monthly)"), year)
     )
   
   # }
@@ -293,7 +293,7 @@ output$page_footer <- renderText({
                 " Does not include data from all reporting units.",
                 ""),
          " Monthly/quarterly totals for a given year may differ from the final and
-              official annual total subsequently reported to WHO. \n",
-         "For countries that reported the providinal number of TB notifications on a quarterly basis, the data are averaged as a monthly basis."
+              official annual total subsequently reported to WHO. \n"#,
+         # "For countries that reported the providinal number of TB notifications on a quarterly basis, the data are averaged as a monthly basis."
   )
 })
